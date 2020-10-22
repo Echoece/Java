@@ -5,21 +5,14 @@ package Collection.Arrays;
 
 // => array is a data structure that allows us to store multiple values of the same type to a  single variable.
 // => in java the default values are set to zero for numeric,false for boolean and null for string and other object elements.
-//
 
 // if we try to access index that is out of range, we get ArrayIndexOutOfBoundsException
 public class Array {
     public static void main(String[] args) {
-
         int[] nums= new int[4];
         nums[0]=10;
         nums[1]=20;
         nums[3]=30;
-        System.out.println(nums[0]);
-        System.out.println(nums[1]);
-        System.out.println(nums[2]);
-        System.out.println(nums[3]);
-
         //---------------------------------------
         int[] numbers=new int[] {2,4,6,8,10};
         for(int number: numbers) {

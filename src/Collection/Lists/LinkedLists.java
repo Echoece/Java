@@ -1,7 +1,7 @@
 package Collection.Lists;
 
 import java.util.*;
-
+// Linked lists extends the abstarct implementation class of list interface, and implements Deque
 public class LinkedLists {
     public static void main(String[] args) {
         // we can pass a collection to the constructor as well to add the list

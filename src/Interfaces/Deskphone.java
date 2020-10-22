@@ -1,5 +1,5 @@
 package Interfaces;
-
+// dummy class, all notes on main class
 public class Deskphone implements iTelephone {
     private  int myNumber;
     private boolean isRinging;

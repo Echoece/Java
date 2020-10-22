@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class ReferenceType {
     // this is a simple topic which i keep making mistake for not paying enough attention to the code >.< . well basically the difference between
-    // value type and reference type i need to keep in mind, thats why this class
+    // value type and reference type i need to keep in mind, thats why this class.
+
+    // note:: in case we want to make a copy of the object itself, not the reference , we can use the clone() method.
     public static void main(String[] args) {
 
         // in case of value type , here we just assigning the value 10 to the number variable. there is no new keyword here. so when we

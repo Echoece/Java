@@ -1,7 +1,8 @@
 package Static;
 
 public class StaticVariables {
-    // every instance of the class shares the same static variable
+    // every instance of the class shares the same static variable, there is only one copy of it in memory. and all instance of class share that
+    // same variable
     private static String name ;
 
     public StaticVariables(String name) {

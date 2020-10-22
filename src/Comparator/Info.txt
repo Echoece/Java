@@ -1,0 +1,13 @@
+We can use the sort method in collection class as it is and just pass the collection, or we can write our own custom comparator that fits to our need.
+the sort() method takes a collection and a comparator which we can define as a anonymous class inside or even better lambda expression.
+
+
+    Collections.sort(people,new Comparator<Person>(){
+        @Override
+        public int compare(final Person lhs,Person rhs) {
+            //     To-Do ->
+            //     return 1 if right side should be before left side
+            //     return -1 if left side should be before right side
+            //     return 0 otherwise (meaning the order stays the same)
+        }
+    });
