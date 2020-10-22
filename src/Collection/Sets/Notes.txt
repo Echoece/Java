@@ -1,9 +1,9 @@
 Set is a collection that contains no duplicate elements.
 This interface is a member of the Java Collections Framework.
 
-
-
-# HashSets : This class offers constant time performance for the basic operations (add, remove, contains and size)
+=> HashSet:           doesn't maintain any kind of order of its elements.
+=> TreeSet:           sorts the elements in ascending order.
+=> LinkedHashSet:     maintains the insertion order. Elements gets sorted in the same sequence in which they have been added to the Set.
 
 
 

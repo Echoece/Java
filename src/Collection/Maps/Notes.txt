@@ -1,0 +1,42 @@
+#The Map interface present in java.util package represents a mapping between a key and a value
+
+=> A Map cannot contain duplicate keys and each key can map to at most one value. Some implementations allow null key
+   and null value like the HashMap and LinkedHashMap, but some do not like the TreeMap.
+=> The order of a map depends on the specific implementations. For example, TreeMap and LinkedHashMap have predictable
+   order, while HashMap does not.
+=> There are two interfaces for implementing Map in java. They are, Map and SortedMap, and three classes: HashMap, TreeMap and LinkedHashMap.
+
+
+#Why and When to use Maps?
+
+Maps are perfect to use for key-value association mapping such as dictionaries. The maps are used to perform lookups
+by keys or when someone wants to retrieve and update elements by keys. Some examples are:
+
+=> A map of error codes and their descriptions.
+=> A map of zip codes and cities.
+=> A map of managers and employees. Each manager (key) is associated with a list of employees (value) he manages.
+=> A map of classes and students. Each class (key) is associated with a list of students (value).
+
+# Implementations :
+HashMap ::      -> makes absolutely no guarantees about the iteration order. It can (and will) even change completely when new elements are added.
+                -> Most useful when looking for a best-performance (fast) implementation.
+
+TreeMap ::      -> will iterate according to the "natural ordering" of the keys according to their compareTo() method
+                   (or an externally supplied Comparator). Additionally, it implements the SortedMap interface, which contains methods
+                   that depend on this sort order.
+                -> Most useful when I'm concerned with being able to sort or iterate over the keys in a particular order that I define.
+
+LinkedHashMap:: -> will iterate in the order in which the entries were put into the map
+                -> Combines advantages of guaranteed ordering from TreeMap without the increased cost of maintaining the TreeMap.
+                   (It is almost as fast as the HashMap). In particular, the LinkedHashMap also provides a great starting point for
+                   creating a Cache object by overriding the removeEldestEntry() method. This lets you create a Cache object that can
+                   expire data using some criteria that you define.
+
+for reference :: https://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap
+
+
+
+
+
+
+
