@@ -1,0 +1,19 @@
+Following steps are followed for the creation of user-defined Exception.
+
+=>  The user should create an exception class as a subclass of Exception class. Since all the exceptions are subclasses of Exception class,
+    the user should also make his class a subclass of it. This is done as:
+                 class MyException extends Exception{}
+
+=>  We can write a default constructor in his own exception class.
+
+=>  We can also create a parameterized constructor with a string as a parameter.
+    We can use this to store exception details. We can call super class(Exception) constructor from this and send the string there.
+                MyException(String str)
+                {
+                   super(str);
+                }
+
+=>  To raise exception of user-defined type, we need to create an object to his exception class and throw it using throw clause, as:
+                MyException myException = new MyException(“Exception details”);
+                throw myException;
+

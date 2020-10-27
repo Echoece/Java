@@ -1,0 +1,20 @@
+Concurrency :: refers to an application doing more than one thing at a time.
+
+=> every thread created by a process shares that process's memory and files
+=> each thread has a thread stack inside the process heap, that only that particular thread can access;
+
+Why we need threads:
+-> we sometimes might want to perform a task thats takes long time (query database/read big file/downloading etc). the code
+   will pause executing if we use a single thread during these task running.
+-> anoher reason maybe that an API requires us to provide one,
+
+
+we can create thread two ways:
+-> extending the Thread class
+-> implementing the runnable interface.
+it is recommeneded/good practice to implement the runnable interface whenever its possible.
+
+
+important :: in both cases , we implement the run() method, we dont call it directly. to start a thread we call the start()
+             method and this will call the run() in turn and create a new thread for us. if we mistakenly call the run method
+             it will not create any thread,  just will run the code in main thread.
