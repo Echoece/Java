@@ -15,7 +15,7 @@ public class Generics <T, U>{
     }
 
     // To print objects of T and U
-    // we could have return type as generic as well, for example public <T> print (){ // return something}
+    // we could have return type as generic as well, for example public <T> foo(){ // return something}
     public void print()
     {
         System.out.println(obj1);
