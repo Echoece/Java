@@ -27,7 +27,7 @@ class Main
     public static void main (String[] args)
     {
         Generics <String, Integer> obj =
-                new Generics<String, Integer>("GfG", 15);
+                new Generics<>("GfG", 15);
 
         obj.print();
     }
