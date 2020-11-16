@@ -6,7 +6,7 @@ import java.util.*;
 // Given an array arr[] of IP Addresses where each element is a IPv4 Address, the task is to sort the given IP addresses in increasing order.
 
 // My Approach:: since its 4 octate of ip adress range, i split each string into 4 part, and compare the parts individually.
-//               i am assuming all the address do have 4 octate and not null etc, i skipped those logic.
+//               i am assuming all the address do have 4 octate and not null etc, i skipped those checks since the purpose here was to learn the comparator.
 
 public class IpProblem {
     public static void main(String[] args) {

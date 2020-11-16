@@ -29,7 +29,7 @@ public class AutoBoxing {
 
         //-----------------------------------------------------------------------------
         int num=24; //Primitive data type
-        @SuppressWarnings("deprecation")  // added to avoid the warning, i wrote the depricated version to understand how it works
+        @SuppressWarnings("deprecation")  // added to avoid the deprecated warning, i wrote the depricated version to understand how it works
 
         Integer intNum=new Integer(num); //Wrapping or Boxing, right way is , Integer intNum = 24;
         int anotherNum= intNum.intValue(); //Unwrapping or Unboxing, right way is , int anotherNum = intNum;
