@@ -1,0 +1,19 @@
+-> New: When we create an object of a Thread class, it will be in new state.
+
+-> Ready: After creating a thread, if we want to run it we have to call start() method. When we call start method it will
+   be in ready state
+
+-> Running: When we call start() method of a Thread Class object, it will in turn call the run() method. Then it enters
+   into running state.
+
+-> Non-Runnable/Blocked: Here thread isn't running and waiting/blocked for some reason.
+   -> wait:        While running a thread can enter into wait state ( using wait() method ), usually waiting for some resource or made to wait by some other
+                   thread. Once it gets notified ( using notify() method ) by some other thread it then enters into running state again.
+
+   -> timed wait:  In case want to delay the thread for some reason ( using sleep() or wait() ) it enters into this state.
+
+   -> blocked:     In case two thread try to access same resource, only one will be able to
+
+-> End: When thread's task is over or stop() method is called, it will enter into End state.
+        Note: Once a thread ends, we cant restart it again. For that we will need a new thread object.
+

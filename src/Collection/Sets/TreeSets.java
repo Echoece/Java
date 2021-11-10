@@ -5,12 +5,12 @@ import java.util.TreeSet;
 //TreeSet is similar to HashSet except that it sorts the elements in the ascending order while HashSet doesn’t maintain any order.
 public class TreeSets {
     public static void main(String[] args) {
-        // TreeSet of String Type
+        // TreeSet of DataTypes.String Type
         TreeSet<String> tset = new TreeSet<String>();
 
-        // Adding elements to TreeSet<String>
+        // Adding elements to TreeSet<DataTypes.String>
         tset.add("ABC");
-        tset.add("String");
+        tset.add("DataTypes/String");
         tset.add("Test");
         tset.add("Pen");
         tset.add("Ink");

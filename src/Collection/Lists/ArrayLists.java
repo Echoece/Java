@@ -81,7 +81,7 @@ public class ArrayLists {
         // the typecasting can be rough though, have to study more about it.
         String[] arr =(String[]) groceryList.toArray();
 
-        //Sorts this list according to the order induced by the specified Comparator.
+        //Sorts this list according to the order induced by the specified Collection.Comparator.
         Collections.sort(groceryList);
 
 

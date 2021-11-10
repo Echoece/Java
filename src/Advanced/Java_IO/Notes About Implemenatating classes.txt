@@ -1,0 +1,31 @@
+ Some notes about implementation of byte stream classes (full list is in the image in this package):
+
+   a) Input stream classes
+   -> ByteArrayInputStream : this is used when we want to work with an array of bytes
+
+   -> FileInputStream: this is used for reading input bytes from a file system. Recommended for reading raw bytes such as image data etc.
+
+   -> FilterInputStream: Its not designed to be used directly, its an example of Decorator design pattern. It's sub-classes we can use
+            -> BufferedInputStream: it adds the ability to buffer the input, and support mark and reset methods.
+            -> DataInputStream: It's used for primitive data types (like int, char etc)
+            -> PushbackInputStream: it has functionality to unread one byte (essentially pushing back one byte to the stream)
+
+   -> ObjectInputStream:
+
+   -> PipedInputStream:
+
+   -> SequenceInputStream:
+
+   -> StringBufferInputStream:
+
+
+   b) Output Stream classes
+
+
+
+   some notes about implementation of character stream classes:
+
+   a) Reader classes
+   -> FileReader: Recommended for reading stream of characters.
+
+   b) Writer classes

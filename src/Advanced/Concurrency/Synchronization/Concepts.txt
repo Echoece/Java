@@ -1,0 +1,39 @@
+-> OOPConcepts of the problem
+Resource Sharing: If more than one thread work on an object (resource usually, or can be other variables) then
+                  the object becomes shared resource.
+
+Critical Section: Usually not all code in the thread uses the shared object. The lines (section) of codes access the Shared
+                  resource are known as critical section.
+
+Mutual Exclusion: In simple terms, it means if one thread access a resource it prevents others to access that resource.
+
+-> Possible solutions:
+
+Locking/Mutex: when one thread uses a shared resource, it put a lock on it using mutex object. when its done, it free the lock
+               Here program controls the mutex object lock and unlock.
+
+               There is an issue with it, sometimes it can happen that two thread see it free and put lock on it. So this isn't used.
+
+
+Semaphore: operating system have wait() and signal() methods. When a thread try to access shared resource it calls wait() and if resource
+           is free, semaphore object grants access to it and change mutex to locked. Now if another thread try to call wait(), then
+           semaphore will send that thread to a block queue and remove them from process queue.
+
+           When a thread finish using the resource, it calls signal() and Semaphore will remove the lock on shared resource and wake up one
+           of the threads and remove them from block queue and move them to ready queue.
+
+           This system came to picture after mutex system. Here operating system controls the mutex object lock and unlock.
+
+Monitor: Here object itself controls the complete mutual exclusion. We just have to use the keyword synchronized
+         and java puts  the entire mutex, read/write and waiting queue etc on that object. So, it is better than
+         locking/mutex (where thread controls the mutual exclusion) and easier than semaphore (where operating system controls)
+
+
+->
+Race-Condition:
+        Race condition happens when multiple threads sleeping on same object. When they wake up they race to get the lock and whoever
+        gets the lock first start working on it.
+        For example, When producer finish writing data, it goes into wait queue with other consumer thread. So it may happen that
+        instead of consumer waking up the producer wake up and start writing again.
+
+Inter-Thread Communication: Using inter-thread communication we can avoid race condition.

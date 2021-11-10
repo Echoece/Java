@@ -1,0 +1,85 @@
+DataTypes.String: This class is (immutable objects are by-default thread safe) immutable. This means once we create an object of string, no changes can be done there.
+        Any operation on that will result in a new instance of string in the heap area (it will be eligible for GC if
+        not referenced). Recommended to use when content dont change too often.
+
+
+
+StringBuilder:  This class is mutable but method's not synchronized. So it is recommended to use on single threaded applications
+                and where content keeps changing. This class operates faster than StringBuffer as threads dont have to wait to use
+                this object.
+
+
+StringBuffer: This class is mutable and its method's are synchronized. So it has advantage of being thread safe. But this
+              also comes with certain disadvantage, as the performance is relatively slow. It is recommended for multi-threaded
+              application where content keeps changing.
+
+# Explain length and capacity for stringBuilder and StringBuffer class->
+    Length: means current content string length.
+    Capacity: means maximum content length that object can hold.
+              -> Default capacity is 16, if we dont specify it.
+              -> In case the object is full (16 size is full) and operation need more space, a new object will be created
+                 with (size+1)*2 capacity and all the content.
+              -> In case a string buffer is constructed from DataTypes.String object, the capacity formula will be =  s.length()+16
+
+              /*-----------------------------------------------------------------------------*/
+
+1. What is mutability and immutability?
+    -> Immutability: Objects state cant be changed after it is constructed. All immutable classes (DataTypes.String and Wrapper
+                     classes) are declared as final.
+       Mutability:   Objects state can be changed after it is constructed.
+
+2. .equals method vs == (equal operator) difference?
+    -> == operator:     It is  always meant for reference comparison (in other words address comparison). So if
+                        both reference pointing to same object, only then it returns true.
+
+       .equals method:  Object class have .equals method and it is meant for reference comparison. But DataTypes.String class
+                        override this method for content comparison.
+                        So, in case of DataTypes.String class .equals method will act as content comparison, while for StringBuffer
+                        class(here .equal method isn't overridden) will act as reference comparison. This is the key
+                        difference.
+
+3. Difference between DataTypes.String and StringBuffer class?
+   -> 1. DataTypes.String is immutable, StringBuffer is mutable class.
+      2. DataTypes.String overwrites the .equal methods as content comparison, but StringBuffer don't do that.
+         (in other words, DataTypes.String.equals meant for content comparison, StringBuffer.equals meant for reference comparison)
+      3.
+
+
+4. Why DataTypes.String object is immutable but StringBuffer is mutable?
+   -> In DataTypes.String, same object can be referenced multiple times in SCP. So, if we change content in one the remaining references
+      will get affected too. That's why Strings are immutable.
+      StringBuffer dont have any special memory management like SCP, so it is not immutable.
+
+5. In addition to DataTypes.String objects, is there any other objects that are immutable?
+   -> All Wrapper class objects are immutable. For example: Byte, Short, Integer, Long, Float, Double, Character, Boolean
+
+6. can we create our own Immutable class?
+  -> yes we can. (check demo class for example).
+
+7. immutable vs final?
+  -> final reference means we cant re-assign that variable to another object. Immutable object means we cant change the content
+     of that object.
+     Example:       final StringBuffer sb = new StringBuffer("hello");
+                    sb.append(" world");             // here sb will point to original object mutated as "hello world"
+                    sb = new StringBuffer("Other");  // this will be compiler error, as sb is declared final. we cant reassign
+
+8. Can we make StringBuffer immutable?
+   -> we cant, not without changing source code.
+
+9. When to choose DataTypes.String vs StringBuilder vs StringBuffer?
+   -> is the DataTypes.String content changing?
+        no  = use DataTypes.String class
+        yes = do we need thread safety?
+              yes = use StringBuffer class
+              no  = use StringBuilder class
+
+10. what is method chaining?
+   -> if two or more method returns same type of object, we can chain them together. This process is called method chaining.
+      The execution order is from left to right.
+
+
+
+
+
+
+

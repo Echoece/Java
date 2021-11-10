@@ -1,0 +1,23 @@
+1. in short, the java program is consist of the method area and stack in the memory (RAM). So everything else is a resource to the program.
+   This includes,   -> heap (where everything with new operator is stored)
+                    -> keyboard (input)
+                    -> monitor (output)
+                    -> remote network client (can be input or output or both) etc
+
+
+2. Stream: Stream is flow of data, it can flow in both direction (from program to resource or resource to program)
+
+3. Buffer: The speed in which the program send/receive data and the resources receiving/sending data might not match. In this case
+           a buffer is used. Buffer is just a memory object to hold the data, to have compatibility between devices. So for example,
+           when a program want to read from a file, the content of file goes into buffer and the program consume the data from there.
+           It is same for sending data from program as well. Data from program goes into buffer, and resources consume it.
+
+
+4. When we want to send data or receive, the data is broken into byte of stream. Java provides lots of classes for streams.
+
+   Byte Stream classes: here data is read one byte at a time (example, inputstream and outputstream classes).
+   Character stream classes: here data is read on character (two byte) at a time (example Reader and writer classes).
+
+
+
+

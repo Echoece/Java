@@ -1,0 +1,16 @@
+-> In Java date is a long number that contains milliseconds passed since 1st January, 1970
+-> Java follows starting year of calender in 1900.
+
+old date API - > Date class from java.util , it  has some property (mutable, contains both date and time, counts
+                 milli second) that might be issue.
+
+
+new Date API -> it is known as joda Date and time API. It has separate class for LocalDate, LocalTIme and LocalDateTime.
+                These classes also represent the time since jan 1, 1970. But these classes are immutable. So whenever we change
+                we will get a new object of these classes.
+
+
+
+
+
+

@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class LinkedHashedSets {
     public static void main(String[] args) {
-        // LinkedHashSet of String Type
+        // LinkedHashSet of DataTypes.String Type
         LinkedHashSet<String> lhset = new LinkedHashSet<String>();
 
         // Adding elements to the LinkedHashSet

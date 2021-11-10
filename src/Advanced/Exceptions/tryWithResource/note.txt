@@ -1,0 +1,17 @@
+This is a new feature introduced in java 1.7.
+
+Context: Context is the area of the program. For java program, stack is the context of the program.
+
+Things like heap, mouse ,keyboard, printer, internet , hard-disk , Database etc are external to the program.
+It is not part of the context. The issue is, when we use external resources, we must return it. Otherwise program
+will occupy that resource and will not be available for other program use.
+
+-> for heap area, Garbage collector automatically deallocate free memory location, so this is not required to handle by
+   developers.
+-> Rest of the resources, developers are responsible to close them after using. In that case we can use finally block to
+   close the resources, or we can use the new java feature try with resource.
+-> Here we dont need to specify the finally block to close the resource, it will be automatically closed. The catch or finally
+   block is purely optional depending on our requirement.
+-> try can only close the resources that implement the interface AutoClosable. It has a method close() defined there.
+-> we can use multiple resources inside try with resource by separating them with semicolon.
+   Example: try (FileInputStream f= new FileInputStream("a.txt"); Scanner sc= new Scanner(f); )

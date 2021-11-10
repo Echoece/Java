@@ -8,7 +8,7 @@ public class LinkedLists {
         LinkedList<String> places = new LinkedList<>();
         // ----------------------------------------------
         // difference between add and offer is their return type, offer returns false when it
-        // fails and add will throw IlligalStateException
+        // fails and add will throw IllegalStateException
 
         // Appends the specified element to the end of this list.
         places.add("dhaka");
@@ -72,9 +72,9 @@ public class LinkedLists {
         // Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element.
         int lastIndexOf = places.lastIndexOf("dhaka");
         //Returns true if this list contains the specified element.
-        places.contains("dhaka");
+        boolean isExists= places.contains("dhaka");
         // Returns the number of elements in this list.
-        places.size();
+        int numberOfElements= places.size();
 
         // ----------------------------------------------
         // Retrieves, but does not remove, the head (first element) of this list.

@@ -3,7 +3,8 @@ This interface is a member of the Java Collections Framework.
 
 => HashSet:           doesn't maintain any kind of order of its elements.
 => TreeSet:           sorts the elements in ascending order.
-=> LinkedHashSet:     maintains the insertion order. Elements gets sorted in the same sequence in which they have been added to the Set.
+=> LinkedHashSet:     maintains the insertion order. Elements gets sorted in the same sequence in which
+                      they have been added to the Set.
 
 
 

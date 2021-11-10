@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
    It is known that a Queue follows the First-In-First-Out algorithm, but sometimes the elements of the queue are needed
    to be processed according to the priority, that’s when the PriorityQueue comes into play. The PriorityQueue is based on
    the priority heap. The elements of the priority queue are ordered according to the natural ordering,
-   or by a Comparator provided at queue construction time, depending on which constructor is used.  */
+   or by a Collection.Comparator provided at queue construction time, depending on which constructor is used.  */
 public class PriorityQueues {
     public static void main(String[] args)
     {
@@ -27,7 +27,7 @@ public class PriorityQueues {
          * What I am doing here is removing the highest
          * priority element from Queue and displaying it.
          * The priority I have set is based on the string
-         * length. The logic for it is written in Comparator
+         * length. The logic for it is written in Collection.Comparator
          */
         while (queue.size() != 0)
         {

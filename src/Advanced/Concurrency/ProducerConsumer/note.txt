@@ -1,0 +1,19 @@
+There is two examples:
+
+1. One producer and one consumer:
+   In this case, we want only one producer who is writing some data into a shared object, and one consumer who is reading
+   data after its been written. So here we can implement a flag variable which will keep track of whose turn is it.
+   For example, if flag is true, producer will write and consumer thread will wait. If flag is false, producer will wait
+   and consumer will read data.
+
+
+2. One producer and multiple consumer:
+   In this case, we want only one producer who is writing data into a shared object, and many consumer reading data after
+   its written. In this case a boolean flag wont be sufficient, we can use a int count variable.
+
+   For example, if variable is 0 then its producers turn to write, and all consumer will wait. Once producer finish writing
+   it will increase the count and go into wait state. Next consumer thread will read data and then increase count and go into
+   wait state. This will go on till last consumer and then it will read data and set variable to 0 again. Now producer
+   can write again.
+
+

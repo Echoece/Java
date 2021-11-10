@@ -22,7 +22,7 @@ HashMap ::      -> makes absolutely no guarantees about the iteration order. It 
                 -> Most useful when looking for a best-performance (fast) implementation.
 
 TreeMap ::      -> will iterate according to the "natural ordering" of the keys according to their compareTo() method
-                   (or an externally supplied Comparator). Additionally, it implements the SortedMap interface, which contains methods
+                   (or an externally supplied Collection.Comparator). Additionally, it implements the SortedMap interface, which contains methods
                    that depend on this sort order.
                 -> Most useful when I'm concerned with being able to sort or iterate over the keys in a particular order that I define.
 

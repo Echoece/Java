@@ -1,0 +1,17 @@
+-> Regular Expressions or Regex (in short) is an API for defining DataTypes.String patterns that can be used for searching, manipulating, and editing a string in Java.
+
+-> To use regular expressions in Java, we do not need any special setup. The JDK contains a special package java.util.regex
+   totally dedicated to regex operations. We only need to import it into our code. This consists of 3 classes and 1 interface.
+       -> util.regex.Pattern :    Used for defining patterns
+       -> util.regex.Matcher :    Used for performing match operations on text using patterns
+       -> PatternSyntaxException: Used for indicating syntax error in a regular expression pattern
+
+-> Moreover, the java.lang.DataTypes.String class also has inbuilt regex support that we commonly use in our code.
+
+
+[abc]	            simple, matches a or b, or c
+[\^abc]	            negation, matches everything except a, b, or c
+[a-c]	            range, matches a or b, or c
+[a-c[f-h]]	        union, matches a, b, c, f, g, h
+[a-c&&[b-c]]	    intersection, matches b or c    [ A= {a,b,c}  B = {b,c} intersection of them gives {b,c} ]
+[a-c&&[\^b-c]]	    subtraction, matches only a     [ subtraction gives {a} ]

@@ -1,0 +1,39 @@
+
+-> Throwable class extends the object
+-> it  has two subclasses :
+    1. Exception (These errors are developers responsibility to handle)
+    2. Error (deals with jvm error like stack overflow, low memory etc. Java handles it)
+
+-> There is two types of exceptions in java:
+    1. Checked : Java compiler forces us to handle these
+       Example: ClassNotFound, IO, Interrupted, NumberFormat, Runtime etc
+    2. Unchecked : Its upto developer to decide if it will be handled or not.
+       Example: Runtime exception (Arithmetic, IndexOutOfBound, NullPointer etc )
+
+
+-> The try catch block must always maintain order in the catch block from child to parent. If we put
+   parent class first, it will handle all the exception and child class will never handle it.
+
+   Example: The following  code will never reach the arithmetic exception cause the parent class
+   Exception catch block comes first.
+
+            try{
+            }catch (Exception e){
+            }
+            catch (ArithmeticException e){
+            }
+
+   The correct order should be:
+
+            try{
+            }catch (Exception e){
+            }
+            catch (ArithmeticException e){
+            }
+
+
+->  Important methods of Exception class:
+    1. DataTypes.String getMessage() : Prints the root cause of error message.
+    2. DataTypes.String toString() : By default if we try to print an object, it automatically calls the toString
+       method. So we dont have to specify it.
+    3. DataTypes.String printStackTrace(): it prints the stack trace of the error

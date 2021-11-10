@@ -1,0 +1,52 @@
+1. Heap and DataTypes.String  constant pool (SCP):
+   -> case 1: when we create a new DataTypes.String object using new operator, two objects will be created
+                1. First one will be in heap, and the reference variable will point at this.
+                2. Second one will be created at the SCP area, no reference points at this. But internally Advanced.JVM will keep a
+                   reference (For this reason). Special case: when similar content object is there already in SCP, no new
+                   object will be created in SCP area.
+
+      case 2: When we assign a string literal (DataTypes.String s = "Echo";), only one object is created in the SCP area. The Advanced.JVM will
+              check if any object with same content is already there. If same content object is there, it will reuse this. Otherwise
+              a new object will be created.
+
+      SCP is used for reusing same object for future purpose.
+      Till 1.6 version, SCP resides in the method area (PermGen)of memory. But from 1.7 version onwards, SCP is moved
+      to heap memory.
+
+
+2. How many objects will be created in heap and SCP area for the following code?
+                   DataTypes.String A= new DataTypes.String("Echo");
+                   s.concat("Student");
+                   DataTypes.String B = s.concat("CSE");
+
+   -> line 1: one object in heap + one object in SCP.
+              (this line = 2 object (heap and SCP = "Echo"), total =2)
+
+      line 2: first,"student" will be created in the SCP area.
+              Note: If an object is created because of runtime operation that object will be created in the heap area (for
+                    DataTypes.String, it will reuse same object is similar content object is already present in the heap area).
+              So, in heap "Echo Student" will be created (because of concat operation) with no reference pointing at
+              it (it will be eligible for GC).
+              (this line= 2 object (heap = "Echo Student" and SCP = "Student"), total =4)
+
+      line 3: one copy of "CSE" will be created in the SCP area. Again here, another object "Echo CSE" will be created
+              in heap as its an object created of runtime operation.
+              (this line= 2 object (heap = "Echo CSE" and SCP = "CSE"), total =6)
+
+      so total of 6 objects created, 3 in the heap area and 3 in the SCP. Out of the 3 in heap area, one of them will be
+      eligible for Garbage collection.
+
+
+3. Advantage/importance and disadvantage of SCP
+   -> Advantage:  Usually in programming most used variable type is DataTypes.String. So, for large scale data, having SCP ensures a significant
+                  performance boost and memory efficiency as multiple references point to single object.
+                  For example, there can be 10 cr+ people in Dhaka. If we want to create object for all of them, we can reuse the
+                  city name in SCP or some other string like male/female etc.
+
+      Disadvantage: Even though we can have multiple reference to same object in SCP, if one reference changes its value the
+                    other reference values will be changed too as they share same copy. This is an issue of SCP, but it is solved
+                    with immutability concept.
+
+4. Why SCP concept is only available for DataTypes.String and not StringBuffer?
+   -> Because DataTypes.String is the most used object in Java, so there is a special memory management system in form of SCP.
+

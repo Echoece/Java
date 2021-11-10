@@ -1,0 +1,26 @@
+-> Download JavaFX SDK from gluton
+-> unzip in a folder
+-> open project structure in Intellij and go to Global Library
+    -> Add java library -> go to the unzipped folder/lib -> select all .jar files
+
+after creating a project:
+-> project structure -> project -> make sure Project SDK and Project language level are same
+-> on the modules tab it should be same SDK as well
+-> from the global library -> right click javaFX -> add to module
+
+
+after this we need to create a module-info.java file. the code is following:
+
+module HelloWorldFX{
+    requires javafx.fxml;
+    requires javafx.controls;
+
+    opens sample;
+}
+
+-----------------------------------------------
+if the above doesnt work::
+then: go to Run-> edit configuration-> modify options-> add VM options and put this
+    -> --module-path "\path\to\javafx-sdk-15.0.1\lib" --add-modules javafx.controls,javafx.fxml
+
+

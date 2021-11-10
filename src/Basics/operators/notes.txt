@@ -1,0 +1,21 @@
+1. ? is a wildcard operator in java, for example if we see
+                List<? extends Number> list
+    in the generic part, it means any class that extends Number class
+
+2.  :: is also known as reference operator in java.It is used to call a method by referring to it with the help
+    of its class directly. They behave exactly as the lambda expressions. The only difference it has from lambda
+    expressions is that this uses direct reference to the method by name instead of providing a delegate to the method.
+
+    for example-> To print all elements of the stream
+    stream.forEach( s-> System.out.println(s));   // using lambda expression
+    stream.forEach( System.out::println(s));      // using colon operator
+
+    Method reference or double colon operator can be used to refer:
+
+    -> a static method,
+    -> an instance method, or
+    -> a constructor.
+
+    for reference = https://www.geeksforgeeks.org/double-colon-operator-in-java/
+
+

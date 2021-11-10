@@ -1,0 +1,25 @@
+throw ::
+    The throw keyword in Java is used to explicitly throw an exception from a method or any block of code.
+    We can throw either checked or unchecked exception.This exception i.e, Instance must be of type Throwable or a subclass of Throwable.
+
+    The flow of execution of the program stops immediately after the throw statement is executed and the nearest
+    enclosing try block is checked to see if it has a catch statement that matches the type of exception. If it finds
+    a match, controlled is transferred to that statement otherwise next enclosing try block is checked and so on. If
+    no matching catch is found then the default exception handler will halt the program.
+
+    The throw keyword is mainly used to throw custom exceptions. It is kind of alternate of returning from a method in
+    some cases (check Exception propagation example).
+
+
+throws ::
+    throws is a keyword in Java which is used in the signature of method to indicate that this method might throw one
+    of the listed type exceptions. The caller to these methods has to handle the exception using a try-catch block.
+
+    => throws keyword is required only for checked exception and usage of throws keyword for unchecked exception is meaningless.
+    => throws keyword is required only to convince compiler and usage of throws keyword does not prevent abnormal termination of program.
+    => By the help of throws keyword we can provide information to the caller of the method about the exception.
+
+
+
+
+

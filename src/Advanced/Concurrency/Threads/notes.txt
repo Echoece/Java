@@ -1,0 +1,37 @@
+important constructors of Thread class:
+    1. Thread(): Default, takes no arguments
+    2. Thread(Runnable r): we can pass a class which implement Runnable interface.
+    3. Thread(Runnable r,DataTypes.String name): Similar to above, just takes extra argument thread name.
+    4. Thread(DataTypes.String name): It takes only the thread name.
+    5. Thread(ThreadGroup g, DataTypes.String name): its used for bunch of threads together.
+
+important methods:
+    Getter/Setter Method:
+        long getId()
+        DataTypes.String getName() (also have setter method)
+        int getPriority() (also have setter method)
+        ThreadState getState()
+        ThreadGroup getThreadGroup()
+
+        void setDaemon(boolean d): Daemon thread is something that runs in the background (for example Garbage collector)
+                                   As the main method ends, all Daemon threads will also end without finishing their task.
+
+    Enquiry Method:
+        boolean isAlive()
+        boolean isDaemon()
+        boolean isInterrupted(): we can interrupt a thread in any time and stop its current action.
+
+    Instance methods:
+        void interrupt(): a thread can interrupt itself or can be interrupted by other thread. It will stop what it is currently
+                          doing ( So if its waiting, it  will wake up , or it its running it will go sleep)
+        void join(): if a thread is terminated, it can wait for other thread to finish. in such cases it can call the join method.
+                     we dont have to specify which thread to wait for, it will wait for all thread to finish.
+        void join(long milliseconds): if we know how long other thread will take to finish, we can specify the time as well.
+        void run(): this method should be overridden for our task.
+        void start(): this method have the multi threading mechanism. It in turns call the run method.
+
+    OOPConcepts.Static Method:
+        int activeCount(): it will tell how many threads are active in a group.
+        Thread currentThread(): it will give a reference to the running/current thread.
+        void yield(): this gives Advanced.JVM scheduler signal that thread can wait in case any other thread waiting for execution
+        void dumpStack():
