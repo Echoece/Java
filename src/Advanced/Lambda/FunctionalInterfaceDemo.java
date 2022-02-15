@@ -2,6 +2,7 @@ package Advanced.Lambda;
 
 
 public class FunctionalInterfaceDemo {
+    // constructor
     public FunctionalInterfaceDemo(String str) {
         System.out.println(str.toUpperCase());
     }
@@ -28,17 +29,18 @@ public class FunctionalInterfaceDemo {
         myLambda= FunctionalInterfaceDemo::new;
         myLambda.display("Hello");
 
-        // 6. in case of multiple parameters, its a bit complicated. this part yet to be studied fully.
+        // 6. in case of multiple parameters, its a bit complicated. this part yet to be studied fully by me.
         MyLambda2 myLambda2 = String::compareTo;
         System.out.println(myLambda2.display("hello","hello"));
 
 
     }
 
+    // a non static method
     public void nonStaticMethod(String str){
         System.out.println("from non static method : "+str);
     }
-
+    // a static method
     public static void reverse(String str){
         StringBuffer sb= new StringBuffer(str);
         sb.reverse();

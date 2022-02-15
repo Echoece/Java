@@ -1,4 +1,4 @@
-Advanced.Concurrency :: refers to an application doing more than one thing at a time. Multi-Programming can be achieved in two way
+Concurrency :: refers to an application doing more than one thing at a time. Multi-Programming can be achieved in two way
     1. Multi-User: more than one user use the same machine and they run their programs on separate terminal. Linux and Unix use this system.
     2. Multi-Task: Here, one user runs multiple program simultaneously. Windows and MacOs use this system.
         a. Multi-Threading: This is another type of multi-tasking, Here one program runs multiple threads to achieve

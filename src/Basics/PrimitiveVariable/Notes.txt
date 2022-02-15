@@ -1,0 +1,28 @@
+There are 4 basic built in primitive data types:
+
+1. Integral - byte (1 byte), short (2 byte), int (4 byte), long (8 bytes)
+2. Float - float (4 bytes) , double (8 bytes)
+3. Char - 2 bytes, ranges from   0 - 65535
+4. Boolean - true or false,
+
+-> default value of everything is 0 and false for boolean.
+
+
+Variables - variables are used for storing data. In java it must have a data type.
+
+Literals - Literals are constant values that are used in a program.
+-> in case of literals we dont have short or byte literals, they all converted to int literals types.
+-> to write double, float or long literals we need to use D/d, F/F and L/l after the literal. Example - 12L
+-> For character literals, use ''
+
+
+We can use different number systems as well,
+-> Binary representation starts with 0B or 0b and possible chars are [0-1]. for example - 0b1101
+-> HexDecimal declaration starts with 0X or 0x and possible chars are [0-9A-Fa-f]. For example - 0xAB6
+-> Octal numbers starts with 0 and possible chars are [0-7]. For example - 012
+
+
+Data types have one signed bit,
+    - 0 means positive number
+    - 1 means negative number
+Negative numbers are always stored as 2's compliment. 1's complement (invert/NOT all bits) + 1 is 2's compliment

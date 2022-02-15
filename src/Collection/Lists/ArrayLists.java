@@ -13,7 +13,7 @@ public class ArrayLists {
         groceryList.add("Food");
         // inserting object to 3rd index, it will shift the current element in to the right side of the array
         groceryList.add(3,"Egg");
-        //Replaces the element at the specified position in this list with the specified element.
+        // Replaces the element at the specified position in this list with the specified element.
         groceryList.set(1,"hello");
         // appending all the elements of the collection to end of list
         groceryList.addAll(Arrays.asList( "hello","hi") );

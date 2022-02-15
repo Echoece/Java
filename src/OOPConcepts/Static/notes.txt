@@ -1,0 +1,1 @@
+Classes cant be static unless it is an inner class.

@@ -26,9 +26,9 @@
    The correct order should be:
 
             try{
-            }catch (Exception e){
+            }catch (ArithmeticException e){
             }
-            catch (ArithmeticException e){
+            catch (Exception e){
             }
 
 

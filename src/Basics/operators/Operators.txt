@@ -1,0 +1,22 @@
+1. Arithmetic Operators:
+-> +, -, *, / are arithmetic operations, % is a special arithmetic operator.
+-> These cant be used on boolean.
+-> we can perform these operations on int, float, double, char
+
+
+# Arithmetic operation result data type
+-> any combination of byte, short, int will result in int data type.
+
+
+2. Logical operators:
+AND operator -> &&
+OR operator  -> ||
+NOT operator -> !
+These operators only work on boolean values.
+
+3. Relational operator:
+Greater than > , less than <, Greater than equal >=, less than equal <=, equal to ==, not Equal to, !=
+These operators return a boolean value.
+
+
+

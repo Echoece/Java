@@ -1,0 +1,38 @@
+# Interpreter VS Compiler:
+    -> Interpreter read each line of code at a time and translate to machine code, Compiler read whole file once and make a separate machine code file.
+    -> Another difference is everytime we run program interpreter is needed, But for compiler we can compile only once and we can run the file
+    -> For error, Compiler wont compile, But Interpreter will run program till it encounter the error.
+    -> Example:
+        Compiler: C,C++
+        Interpreter: JavaScript
+        Hybrid: Java (It is both interpreter and compiled language)
+    -> Interpreter languages are generally slower compared to compiled language.
+
+
+# How Java Program is run?
+A Java program is first compiled into byte code if there is no error. Then this byte code is interpreted by JVM. The JVM actually executes the
+program.
+
+
+# How is Java Platform independent?
+Java is platform-independent because it does not depend on any type of platform.
+Language like C++ is platform dependent, because the compiler generates a executable file for the specific platform architecture. We cant run that file on other platform.
+
+But Java works a bit differently, It's compiler generates a byte code, which runs on JVM. JVM is actually platform dependent as it interacts with the hardware
+via the OS system calls. JVM execute the bytecode via JIT compiler (an interpreter). So we can compile program once to get the byte code, then can run in any
+platform via the JVM.
+
+
+# Features of Java:
+-> Simple: very similar to C/C++ or even for new learners.
+-> Secure: It cant be attacked by virus or malware as JVM has a security manager which will prevent execution of any malicious code.
+-> Portable: It is platform independent so it is portable on any platform provided JVM is available
+-> Object-Oriented: It has the properties of OOP such as abstraction, inheritance, encapsulation, polymorphism
+-> Robust: It doesnt crash under worse condition, as it guarantees that even if resource isn't available program will not crash
+-> Multi-threaded: Java is multi threaded
+-> Architecture-neutral: There is many architecture like Von-Neumann, ARM, RISC, CISC, Embedded etc. Java can run on all architecture.
+-> Interpreted and High performance: It is interpreted language, but high performance due to JIT compiler
+-> Distributed: It supports multiple computer connected together in a network, and java programs can be divided into multiple modules running on various
+   machine that can run together and make a complete program. Frameworks like EJB, SPRING are examples
+-> Dynamic:
+

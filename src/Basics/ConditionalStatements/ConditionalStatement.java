@@ -1,7 +1,8 @@
 package Basics.ConditionalStatements;
 
 public class ConditionalStatement {
-    // we have basically if-else, switch-case and ternary experession for conditional statement. We also have jump conditions - break, continue and return
+    // we have basically if-else, switch-case and ternary expression for conditional statement. We also have jump
+    // conditions - break, continue and return
 
     /* Ternary expressions are good for situations where we need just one condition
        evaluated (which happens a lot of time in practical codes). */
@@ -21,7 +22,7 @@ public class ConditionalStatement {
     }
 
     public void gradeCalculate() {
-        //Expression can be of type byte, short, int, char,string or an enum.
+        // Expression can be of type byte, short, int, char,string or an enum.
         // we need to be careful of using break; statement here. because without the break the code will continue to run
         // and go to next case, and will give results that are not desired.
         int mark=100;

@@ -1,9 +1,6 @@
 package Collection.Comparator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class StringComparator {
     public static void main(String[] args) {
@@ -41,7 +38,6 @@ public class StringComparator {
             }
         });
         list.forEach((element-> System.out.println(element+" ")));
-
 
     }
 

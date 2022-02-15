@@ -1,5 +1,5 @@
 package OOPConcepts.Abstract;
-// there is two ways of achieve abstraction in java, interface (100% ) abd abstract class(0-100% abstraction). abstract
+// there is two ways of achieve abstraction in java, interface (100% ) and abstract class(0-100% abstraction). abstract
 // classes, like interface Provide a common interface which allows the subclass to be interchanged with all other subclasses.
 // only difference is , we can specify some method and variables which we couldn't do in interface.
 
@@ -26,13 +26,16 @@ package OOPConcepts.Abstract;
 // =>  an abstract class can contain constructors in Java. And a constructor of abstract class is called when an
 //     instance of a inherited class is created.
 
-
 abstract class Base {
     abstract void fun();
 }
+
 class Derived extends Base {
-    void fun() { System.out.println("Derived fun() called"); }
+    void fun() {
+        System.out.println("Derived fun() called");
+    }
 }
+
 public class AbstractClass {
     public static void main(String[] args) {
         Base b = new Derived();

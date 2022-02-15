@@ -1,0 +1,28 @@
+# JVM architecture:
+
+-> Class Loader Subsystem: After compiling the class files, it is loaded into the method area memory by class loader. It is called class loading.
+   Whichever class is loaded an object is created in the heap area for supporting reflection API. It has three sections
+    1. Loading: It has three part as well,
+        a. Bootstrap class loader: All the required library classes of Java will be loaded by bootstrap class loader. We can find these classes in java/rt.jar
+        b. Extension class loader: These are useful for providing runtime environment for JVM. We can find these classes in the java/ext folder
+        c. Application class loader: it will load those classes that we write for our applications.
+    2. Linking: It has three part as well,
+        a. Verify: It will verify if the byte code is in perfect order or not
+        b. Prepare: This will allocate memory for static variables which are stored in method area.
+        c. Resolve: Here the actual process of linking happen. Here method calls are replaced by their memory address.
+    3. Initialization: Here this will initialize the static variables and execute the static blocks
+
+-> Method Area: After compiling the class files, it is loaded into the method area memory by class loader.
+-> Stack: Stack is where variables and references are stored. Whenever a method is called its stack frame is created in the stack area. Different threads
+   will have their own stack area.
+-> Heap: Heap is where objects are stored which are created during the runtime. All threads will share same heap area.
+-> Execution Engine: Here CPU will start executing the instructions, JIT Compiler or Interpreter will convert the byte code to the machine code in
+   this step. JVM will decide whether to use JIT compiler or interpreter.
+        a. Interpreter: This converts byte code to machine code.
+        b. JIT Compiler: JIT compiler is more efficient than interpreter, it is usually used for repetitive code.
+        c. Garbage collector: Here the objects that are not referenced in heap area are freed.
+-> PC register: JVM will handle the address of next instructions and give to CPU in this section. If there is multiple threads, there will be seperate
+   PC registers for each thread.
+-> Native method stack: This part is where native methods are run in case we use the JNI (java native interface).
+-> Native method interface:
+-> Native method library:
