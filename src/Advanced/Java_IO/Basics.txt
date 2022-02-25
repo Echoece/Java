@@ -19,12 +19,15 @@
    Character stream classes: here data is read on character (two byte) at a time (example Reader and writer classes). It
                              is useful for reading unicode format characters,where byte stream requires more formatting.
 
+5. Piped Streams: This is mostly used in multithreading. For example, the producer-consumer problem, we can use a piped input stream
+   and piped output stream. Then we can join them together in the main function so they work as one.
+
 
 
 
 
 Rule of Thumb (need to confirm these again):
-    -> Reader/Writter is good for dealing with data from resources. Streams is good for binary data such as image etc
+    -> Reader/Writer is good for dealing with data from resources. Streams is good for binary data such as image etc
 
     -> use Printwriter class for writing, BufferedInputReader for reading string data from files.
 

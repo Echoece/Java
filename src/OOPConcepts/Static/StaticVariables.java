@@ -6,7 +6,7 @@ public class StaticVariables {
     private static String name ;
 
     public StaticVariables(String name) {
-        // we cant actually use this.name in this case , because the variable is static.
+        // we cant actually use this.name in this case , because the variable is static. We have to use the classname to access the static variable
         StaticVariables.name = name;
     }
     public void printName(){

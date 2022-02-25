@@ -1,0 +1,11 @@
+Object class is the parent class of all java classes. Every class is directly or indirectly inheriting from this class.
+
+Important Methods:
+1. clone()      This creates a shallow copy of the object.
+2. equals()     checks for equality of two object. This checks for reference equality.
+3. finalize()   This is java's version of destructor. But as garbage collector calls this method, we dont need to deal with it.
+4. getClass()
+5. hashCode()   Every java object will have a unique hashCode given by JVM. We can get that from this method. This is not exact memory location, a hashed value.
+6. toString()   returns a String representation of the class. If we try to print an object, it will implicitly call toString method.
+7. notify(), notifyAll(), wait(), wait(long timeout), wait(long timeout, int nanosecond) all are used for multithreading
+

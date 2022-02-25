@@ -18,7 +18,7 @@ public class DemoTryWithResource {
         // wont be executed.
     }
 
-    static void usingFinally() throws IOException{
+    static void usingFinally() throws IOException {
         FileReader fileReader = null;
 
         try{

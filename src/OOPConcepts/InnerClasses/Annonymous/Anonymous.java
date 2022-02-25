@@ -12,7 +12,6 @@ public class Anonymous {
             }
         };
         //--------------------------------------
-
         // case 2 : For implementing an interface,When implementation of interface is required only for current case
         interfaceA i = new interfaceA() {
             public void methodA() {
@@ -20,7 +19,6 @@ public class Anonymous {
             }
         };
         //--------------------------------------
-
         // case 3: Argument Defined Anonymous inner class:
         B b = new B();
         b.method(new Foo() {
@@ -29,7 +27,6 @@ public class Anonymous {
             }
         });
         //--------------------------------------
-
     }
 }
 
@@ -39,16 +36,15 @@ class A{
         System.out.println("methodA");
     }
 }
-//------------------------
 
+//------------------------
 // interface for case 2
 @FunctionalInterface
 interface interfaceA{
     public void methodA();
 }
+
 //------------------------
-
-
 // for case 3
 @FunctionalInterface
 interface Foo {

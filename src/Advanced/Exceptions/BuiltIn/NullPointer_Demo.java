@@ -6,8 +6,8 @@ public class NullPointer_Demo {
     public static void main(String args[])
     {
         try {
-            String a=null; //null value
-            System.out.println(a.charAt(0));
+            foo a=null; //null value
+            System.out.println(a.age);
         } catch(NullPointerException e) {
             System.out.println("NullPointerException..");
         }

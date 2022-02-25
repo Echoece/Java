@@ -31,5 +31,7 @@ public class LinkedHashedSets {
         lhset2.add(66);
         System.out.println(lhset2);
 
+        // Similar methods like hashmap
+
     }
 }

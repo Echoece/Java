@@ -1,0 +1,15 @@
+-> Java.lang package contains the wrapper classes.
+-> Boolean, Character, Byte, Short, Integer, Long, Float, Double
+-> Basically these wrapper classes creates object from primitive types. This process is called Boxing/wrapping over primitive type.
+
+Number class is the parent abstract class of Byte, Short, Integer, Long, Float, Double wrapper classes.
+It's methods contains byteValue(), doubleValue(), floatValue(), intValue(), longValue(), shortValue() etc. So any number can be converted
+to other type.
+
+
+# To initialize a wrapper class we can use the static valueOf() method, which have several overloads. Or we can directly assign the value.
+  We also could use new keyword, but first two is better.
+  We can also mention a radix in the valueOf() method, using this we can create different number system like decimal,hex,octal, binary
+
+# different methods are there.
+

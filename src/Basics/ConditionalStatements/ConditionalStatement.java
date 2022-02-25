@@ -7,7 +7,7 @@ public class ConditionalStatement {
     /* Ternary expressions are good for situations where we need just one condition
        evaluated (which happens a lot of time in practical codes). */
 
-    // Switch is more efficient than a nested if in cases when there is one condition to evaluate a fixed data value.
+    // Switch is more efficient than a nested if else cases when there is one condition to evaluate a fixed data value.
 
     // break - is used to 1) terminate a sequence in switch statement, 2) exit a loop
     // continue - is used to force an early iteration of the loop, skipping the remaining code.

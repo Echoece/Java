@@ -5,7 +5,7 @@ class Outer {
     void outerMethod() {
         System.out.println("inside outerMethod");
         //-------------------------------
-        // => Method local inner class can’t be marked as private, protected, static and transient
+        // => local inner class can’t be marked as private, protected, static and transient
         //    but can be marked as abstract or final, but not both at the same time.
         class Inner {
             int x=6;

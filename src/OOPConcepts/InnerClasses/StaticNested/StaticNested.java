@@ -23,7 +23,7 @@ public class StaticNested {
         // since its a static class , we dont need to instantiate an object of parent class.
 
         Outer.Inner staticNested = new Outer.Inner();
-        // Outer.Inner innerClass = new Outer().new Inner(); // for non static/nested inner class
+        // Outer.Inner innerClass = new Outer().new Inner(); // for non static-nested inner class
 
     }
 }

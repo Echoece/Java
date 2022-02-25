@@ -17,7 +17,6 @@ public class Main {
         // creating a new thread
         Thread anotherThread = new AnotherThread();
         anotherThread.start();
-
         System.out.println(ANSI_RED+"Hello Again From Main Thread");
 
         // instead of creating a class we can use anonymouse class,
@@ -29,8 +28,17 @@ public class Main {
 
             }
         }.start();
-
         // we can replace this with lambda expression
         new Thread(()->System.out.println(ANSI_CYAN+"Hello From Advanced.Lambda expression")).start();
     }
 }
+class AnotherThread extends Thread {
+    @Override
+    public void run(){
+        System.out.println(Main.ANSI_PURPLE+"Hello From Another Thread");
+        for(int i=0; i <100; i++){
+            System.out.print(Main.ANSI_PURPLE+" "+i);
+        }
+    }
+}
+

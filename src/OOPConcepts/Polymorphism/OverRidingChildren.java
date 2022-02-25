@@ -3,7 +3,7 @@ package OOPConcepts.Polymorphism;
 public class OverRidingChildren extends OverRidingParent {
 
     // rules :
-    // => it must have same + argument
+    // => it must have same name + argument
     // => return type can be subclass of the return type in parent class
     // => we cant override static method.
     // => we cant override final method.

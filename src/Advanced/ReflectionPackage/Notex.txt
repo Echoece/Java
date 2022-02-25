@@ -1,0 +1,2 @@
+If we notice closely, we can see IDE like IntelliJ, Netbeans etc gives us suggestion about available methods of an object when we
+write . after it. IDE does this using reflection package. This package gives us information/definition of a class.

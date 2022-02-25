@@ -10,7 +10,7 @@ public class JDBCBasics {
     // case we only need to use the mysql JDBC driver instead of the sqlite one. Of course we have to migrate database
     // too in that case. (But in reality its not that simple, often it can create unexpected bugs)
 
-    // JDBC consist of two package : java.sql(core JDBC) and jabax.sql(optional JDBC, required for database servers)
+    // JDBC consist of two package : java.sql(core JDBC) and javax.sql(optional JDBC, required for database servers)
 
     // for sqlite , we can use the DB browser for sqlite GUI.
 

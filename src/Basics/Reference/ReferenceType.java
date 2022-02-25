@@ -6,14 +6,17 @@ public class ReferenceType {
     // this is a simple topic which i keep making mistake for not paying enough attention to the code >.< . well basically the difference between
     // value type and reference type i need to keep in mind, that's why i wrote this class.
 
+    // Check for Shallow copy vs deep copy. (important topic in javascript as well).
+
     // note:: in case we want to make a copy of the object itself, not the reference , we can use the clone() method.
     public static void main(String[] args) {
+        int number= 10;
 
         // in case of value type , here we just assigning the value 10 to the number variable. there is no new keyword here. so when we
         // assign number to anotherNumber, we just assign the value. So any changes made on these variables will be separate
-        int number= 10;
         int anotherNumber = number;
         System.out.println("number :"+number+" anotherNumber: "+anotherNumber); // output=> number :10 anotherNumber: 10
+
         //here if we increase the anothernumber value , it wont affect the number. they are stored seperate location
         anotherNumber++;
         System.out.println("number :"+number+" anotherNumber: "+anotherNumber); // output=> number :10 anotherNumber: 11
@@ -39,6 +42,8 @@ public class ReferenceType {
             array:: [1, 2, 4, 88]
             another array:: [1, 2, 4, 88]
         */
+
+        // The solution is to make deep copy
     }
 
 }

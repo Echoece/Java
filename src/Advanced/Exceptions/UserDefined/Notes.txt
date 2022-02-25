@@ -14,6 +14,10 @@ Following steps are followed for the creation of user-defined Exception.
                 }
 
 =>  To raise exception of user-defined type, we need to create an object to his exception class and throw it using throw clause, as:
-                MyException myException = new MyException(“Exception details”);
-                throw myException;
+
+                -> MyException myException = new MyException(“Exception details”);
+                   throw myException;
+
+                or,
+                -> throw new MyException(“Exception details”);
 

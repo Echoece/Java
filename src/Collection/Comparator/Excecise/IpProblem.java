@@ -9,8 +9,8 @@ import java.util.*;
 
 public class IpProblem {
     public static void main(String[] args) {
-        String[]  arr = {"126.255.255.255", "169.255.0.0", "169.253.255.255"};
-
+        //String[]  arr = {"126.255.255.255", "169.255.0.0", "169.253.255.255"};
+        String[]  arr = {"126.255.255.255", "126.255.255.255", "169.253.255.255"};
         Collections.sort(Arrays.asList(arr),new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -22,9 +22,13 @@ public class IpProblem {
                 // loop for checking the order
                 int i=0;
                 // if both are equal, we proceed with checking the next octet, of course if its
-                while (obj1[i].compareTo(obj2[i]) == 0 ){
+                while (obj1[i].compareTo(obj2[i]) == 0){
+                    if(i==obj1.length)
+                        break;
+
                     if(i==obj1.length)
                         isEqual= true;
+
                     i++;
                 }
 
